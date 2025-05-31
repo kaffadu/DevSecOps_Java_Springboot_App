@@ -6,7 +6,7 @@ on:
 
 jobs:
   sonar:
-    runs-on: java_build
+    runs-on: build_server
     #needs: build  # Ensures Sonar runs after build succeeds
     steps:
       - name: Build and analyze
