@@ -50,7 +50,6 @@ import org.testcontainers.DockerClientFactory;
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT, properties = { "spring.docker.compose.skip.in-tests=false", //
 		"spring.docker.compose.profiles.active=postgres", "spring.docker.compose.wait.timeout=120s" })
 @ActiveProfiles("postgres")
-@DirtiesContext(classMode = ClassMode.AFTER_CLASS)
 @DisabledInNativeImage
 public class PostgresIntegrationTests {
 
