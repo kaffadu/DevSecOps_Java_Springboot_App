@@ -23,4 +23,4 @@ docker compose installed on runner
 version: "2.2"
 stopped postgres
 maven build issue fixed
-jfrog token fix
+jfrog token fix X 2
