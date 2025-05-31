@@ -2,8 +2,7 @@ Change docker repo name: DOCKER_IMAGE: kaffadu/petapp:${{ github.sha }}
 
 - name: SonarCloud Scan
         run: mvn sonar:sonar -Dsonar.projectKey=ankit20000_DevSecops_Pipeline -Dsonar.organization=ankit20000 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=3efd906389f89ff2f42493c5bda21481a0a75a68
-4c8af4b9-b85d-467c-bd5a-f5ea6bca3aec
-a0pkayiyvybmk
+4c8af4b9-b85d-467c-bd5a-f5ea6bca3aeca0pkayiyvybmk
 
 # Create a folder
 $ mkdir actions-runner && cd actions-runnerCopied!# Download the latest runner package
@@ -23,3 +22,5 @@ working on runner
 docker compose installed on runner
 version: "2.2"
 stopped postgres
+maven build issue fixed
+jfrog token fix
