@@ -21,3 +21,4 @@ runs-on: self-hosted
 first changes 31.05.2025
 working on runner
 docker compose installed on runner
+version: "2.2"
