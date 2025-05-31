@@ -19,4 +19,4 @@ Using your self-hosted runner
 runs-on: self-hosted
 
 first changes 31.05.2025
-
+working on runner
