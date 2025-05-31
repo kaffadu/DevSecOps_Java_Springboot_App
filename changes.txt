@@ -1,0 +1,19 @@
+Change docker repo name: DOCKER_IMAGE: kaffadu/petapp:${{ github.sha }}
+
+- name: SonarCloud Scan
+        run: mvn sonar:sonar -Dsonar.projectKey=ankit20000_DevSecops_Pipeline -Dsonar.organization=ankit20000 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=3efd906389f89ff2f42493c5bda21481a0a75a68
+4c8af4b9-b85d-467c-bd5a-f5ea6bca3aec
+a0pkayiyvybmk
+
+# Create a folder
+$ mkdir actions-runner && cd actions-runnerCopied!# Download the latest runner package
+$ curl -o actions-runner-linux-x64-2.324.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.324.0/actions-runner-linux-x64-2.324.0.tar.gzCopied!# Optional: Validate the hash
+$ echo "e8e24a3477da17040b4d6fa6d34c6ecb9a2879e800aa532518ec21e49e21d7b4  actions-runner-linux-x64-2.324.0.tar.gz" | shasum -a 256 -cCopied! # Extract the installer
+$ tar xzf ./actions-runner-linux-x64-2.324.0.tar.gzCopied!
+Configure
+# Create the runner and start the configuration experience
+$ ./config.sh --url https://github.com/kaffadu/DevSecOps_Java_Springboot_App --token A2V7L3MDM4JONIO4TOTB7Y3IHNJZQCopied!# Last step, run it!
+$ ./run.shCopied!
+Using your self-hosted runner
+# Use this YAML in your workflow file for each job
+runs-on: self-hosted
