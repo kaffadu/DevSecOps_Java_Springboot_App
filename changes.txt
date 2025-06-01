@@ -52,6 +52,4 @@ jobs:
                     ACCESS_TOKEN=$(curl -XPOST -H "Content-Type: application/json" "https://trials7xrt1.jfrog.io/access/api/v1/oidc/token" -d "{\"grant_type\": \"urn:ietf:params:oauth:grant-type:token-exchange\", \"subject_token_type\":\"urn:ietf:params:oauth:token-type:id_token\", \"subject_token\": \"${ID_TOKEN}\", \"provider_name\": \"DevSecOps_Java_Springboot_App\"}" | jq .access_token | tr -d '"')
                     echo "ACCESS_TOKEN=${ACCESS_TOKEN}" >> $GITHUB_ENV
             
-
-
 https://trials7xrt1.jfrog.io/artifactory/api/maven/petappjfrog-repo
