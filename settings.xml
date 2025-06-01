@@ -15,15 +15,15 @@
     <server>
       <username>kaffadu@icloud.com</username>
       <password>${env.JFROG_TOKEN}</password>
-      <id>petappjfrog-repo-libs-snapshot</id>
+      <id>petappjfrog-repo</id>
     </server>
   </servers>
   <mirrors>
     <mirror>
       <mirrorOf>*</mirrorOf>
-      <name>petappjfrog-repo-libs-snapshot</name>
-      <url>https://trials7xrt1.jfrog.io/artifactory/petappjfrog-repo-libs-snapshot</url>
-      <id>petappjfrog-repo-libs-snapshot</id>
+      <name>petappjfrog-repo</name>
+      <url>https://trials7xrt1.jfrog.io/artifactory/petappjfrog-repo/</url>
+      <id>petappjfrog-repo</id>
     </mirror>
   </mirrors>
   <profiles>
@@ -34,14 +34,16 @@
             <enabled>false</enabled>
           </snapshots>
           <id>central</id>
-          <name>petappjfrog-repo-libs-release</name>
-          <url>https://trials7xrt1.jfrog.io/artifactory/petappjfrog-repo-libs-release</url>
+          <name>petappjfrog-repo</name>
+          <url>https://trials7xrt1.jfrog.io/artifactory/petappjfrog-repo/</url>
         </repository>
         <repository>
-          <snapshots />
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
           <id>snapshots</id>
-          <name>petappjfrog-repo-libs-snapshot</name>
-          <url>https://trials7xrt1.jfrog.io/artifactory/petappjfrog-repo-libs-snapshot</url>
+          <name>petappjfrog-repo-snapshots</name>
+          <url>https://trials7xrt1.jfrog.io/artifactory/petappjfrog-repo/</url>
         </repository>
       </repositories>
       <pluginRepositories>
@@ -50,14 +52,16 @@
             <enabled>false</enabled>
           </snapshots>
           <id>central</id>
-          <name>petappjfrog-repo-libs-release</name>
-          <url>https://trials7xrt1.jfrog.io/artifactory/petappjfrog-repo-libs-release</url>
+          <name>petappjfrog-repo</name>
+          <url>https://trials7xrt1.jfrog.io/artifactory/petappjfrog-repo/</url>
         </pluginRepository>
         <pluginRepository>
-          <snapshots />
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
           <id>snapshots</id>
-          <name>petappjfrog-repo-libs-snapshot</name>
-          <url>https://trials7xrt1.jfrog.io/artifactory/petappjfrog-repo-libs-snapshot</url>
+          <name>petappjfrog-repo-snapshots</name>
+          <url>https://trials7xrt1.jfrog.io/artifactory/petappjfrog-repo/</url>
         </pluginRepository>
       </pluginRepositories>
       <id>artifactory</id>
