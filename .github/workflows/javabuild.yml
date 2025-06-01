@@ -44,6 +44,7 @@ jobs:
         env:
           JF_URL: https://trialed2lwf.jfrog.io
           JF_ACCESS_TOKEN: ${{ secrets.JFROG_TOKEN }}
+          JF_USER: ${{ secrets.JFROG_USER }}
       - name: Upload JAR to JFrog
         run: |
-           jf rt u "target/*.jar" "petappjfrog-repo/"     
+           jf rt u "target/*.jar" "petappjfrog-repo/"  
