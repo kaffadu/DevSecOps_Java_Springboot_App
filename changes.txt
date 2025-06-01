@@ -10,7 +10,7 @@ $ echo "  actions-runner-linux-x64-2.324.0.tar.gz" | shasum -a 256 -cCopied! # E
 $ tar xzf ./actions-runner-linux-x64-2.324.0.tar.gzCopied!
 Configure
 # Create the runner and start the configuration experience
-$ ./config.sh --url https://github.com/kaffadu/DevSecOps_Java_Springboot_App --token A2V7L3MDM4JONIO4TOTB7Y3IHNJZQCopied!# Last step, run it!
+$ ./config.sh --url https://github.com/kaffadu/DevSecOps_Java_Springboot_App --token d!# Last step, run it!
 $ ./run.shCopied!
 Using your self-hosted runner
 # Use this YAML in your workflow file for each job
