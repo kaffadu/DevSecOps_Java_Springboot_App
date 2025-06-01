@@ -53,3 +53,5 @@ jobs:
                     echo "ACCESS_TOKEN=${ACCESS_TOKEN}" >> $GITHUB_ENV
             
 https://trials7xrt1.jfrog.io/artifactory/api/maven/petappjfrog-repo
+
+
