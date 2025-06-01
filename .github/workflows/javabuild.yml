@@ -2,7 +2,7 @@
 name: Build
 
 on: 
-  workflow_call:
+ workflow_call:
 
 jobs:
   build:
@@ -37,19 +37,21 @@ jobs:
     # token
     #     run: |
     #         jfrog config add my-artifactory --url=https://trial42aeja.jfrog.io --apikey=
-      - name: Setup JFrog CLI
-        uses: jfrog/setup-jfrog-cli@v3
-        with:
-          version: latest
+    #  - name: Configure JFrog CLI
+    #    uses: jfrog/setup-jfrog-cli@v3
+    #    with:
+    #      version: latest
+    #    env:
+    #      JF_URL: https://trialed2lwf.jfrog.io
+    #      JF_ACCESS_TOKEN: ${{ secrets.JFROG_TOKEN }}
+    #      JF_USER: kaffadu@icloud.com
+    #  - name: Upload JAR to JFrog
+    #    run: |
+    #       jf rt u "target/*.jar" "petappjfrog-repo/"  
 
-      - name: Configure JFrog CLI
-        run: |
-          jf config add my-artifactory \
-            --url="${{ secrets.JFROG_URL }}" \
-            --user="${{ secrets.JFROG_USER }}" \
-            --access-token="${{ secrets.JFROG_TOKEN }}" \
-            --interactive=false
+        env:
+          JFROG_TOKEN: ${{ secrets.JFROG_TOKEN }}
+          JF_USER: kaffadu@icloud.com
 
-      - name: Upload JAR to JFrog
-        run: |
-          jf rt u "target/*.jar" "petappjfrog-repo/"  
+      - run: mvn -s settings.xml deploy
+      
