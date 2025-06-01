@@ -12,4 +12,7 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=kaffadu_DevSecOps_Java_Springboot_App
+        run: |
+          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+            -Dsonar.projectKey=kaffadu_DevSecOps_Java_Springboot_App \
+            -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }}
