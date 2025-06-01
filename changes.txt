@@ -24,3 +24,4 @@ version: "2.2"
 stopped postgres
 maven build issue fixed
 jfrog token fix X 3
+jfrog cli installed
